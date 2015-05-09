@@ -1,0 +1,38 @@
+<html>
+ <head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script> 
+ </head>
+
+ <body>
+   <center>
+    <font color="navy">
+    <big>
+		<big>
+			<big>
+				Excluir Clientes
+			</big>
+		</big>
+	</big>
+	</font>
+   </center>
+   <br>
+   <form id="cadastro" name="form1" method="post" action="excluir_cli.php" enctype="multipart/form-data" >
+    <table width="350" border="0">
+
+    <tr>
+     <td><b>CPF do Cliente:</b></td>
+     <td><input type="text" name="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
+	<font color="red">*</font></td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2"><p>
+        <input name="cadastrar" type="submit" id="cadastrar" value="Excluir !" /> 
+		</td>
+    </tr>
+
+   </table>
+  </form>
+ </body>
+</html>

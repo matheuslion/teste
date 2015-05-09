@@ -1,0 +1,725 @@
+<html>
+ <head>
+ 
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script> 
+
+
+
+ </head>
+
+ <body background="images/fundo.png">
+ 
+   <center>
+    <font color="navy">
+    <big>
+		<big>
+			<big>
+				Anamnese
+			</big>
+		</big>
+	</big>
+	</font>
+	
+   </center>
+
+   <font color="navy">
+    <big>
+		<big>
+			Dados Pessoais
+		</big>
+	</big>		
+   </font>
+   
+
+   
+   <form id="cadastro" name="form1" method="post" action="gravar_cliente.php" enctype="multipart/form-data" >
+    <table width="770" border="0">
+
+     <tr>
+      <td width="69"><b>Nome:</b></td>
+      <td width="546"><input name="nome" type="text" id="nome" size="30" maxlength="60" /></td>
+	  
+    </tr>
+	<tr>
+     <td><b>Data Nasc.:</b></td>
+     <td><input name="data_nasc" type="text" id="data_nasc" size="30" maxlength="60" /></td>
+    </tr>
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+    
+    <tr>
+        <td> 
+	   <font color="navy">
+		<big>
+			<big>
+				Filiação
+			</big>
+		</big>		
+	   </font>
+	</td>
+    </tr>
+    
+    <tr>
+		<td>
+		 <b>Mãe:</b>
+		</td>
+		<td>
+		 <input name="mae" type="text" id="mae" size="30" maxlength="70" />
+		</td>
+    </tr>
+    
+    <tr>
+    	<td>
+    	<b>Pai:</b>
+		 </td>
+		 <td>
+		 <input name="pai" type="text" id="pai" size="30" maxlength="70" />
+		</td> 
+    </tr>
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+ 
+    <tr>
+     <td><b>Identidade:</b></td>
+     <td>
+     <input name="rg" type="text" id="rg" size="10" maxlength="60"/>
+
+     <b>Exp.:</b>
+     <input name="exp" type="text" id="exp" size="6" maxlength="60"/></td>
+	</tr>
+
+    <tr>
+     <td><b>Sexo:</b></td>
+     <td><input name="sexo" type="text" id="sexo" size="30" maxlength="70" /></td>
+    </tr>
+     
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+    
+    <tr>
+     <td><b>Etnia:</b></td>
+     <td><input name="etnia" type="text" id="etnia" size="30" maxlength="70" /></td>
+    </tr>
+
+    <tr>
+     <td><b>Estado Civil:</b></td>
+     <td><input name="estado_civil" type="text" id="estado_civil" size="30" maxlength="70" /></td>
+    </tr>
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+    
+
+    <tr>
+     <td><b>Profissão Atual:</b></td>
+     <td><input name="proff_atual" type="text" id="proff_atual" size="30" maxlength="70" /></td>
+    </tr>
+
+
+    <tr>
+     <td><b>Profissão Anterior:</b></td>
+     <td><input name="proff_anterior" type="text" id="proff_anterior" size="30" maxlength="70" /></td>
+    </tr>
+    
+    
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>     
+     
+    <tr>
+     <td><b>Endere&ccedil;o Residencial:</b></td>
+     <td><input name="endereco_res" type="text" id="endereco_res" size="30" maxlength="70" /></td>
+    </tr>
+	
+	<tr>
+     <td><b>Numero:</b></td>
+     <td><input name="n_res" type="text" id="n_res" size="10" maxlength="60" /></td>
+    </tr>
+	
+    <tr>
+     <td><b>Bairro:</b></td>
+     <td><input name="bairro_res" type="text" id="bairro_res" size="30" maxlength="60" /></td>
+    </tr>
+
+
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+
+    <tr>
+     <td><b>Endere&ccedil;o Profissional</b></td>
+     <td><input name="endereco_pro" type="text" id="endereco_pro" size="30" maxlength="70" /></td>
+    </tr>
+	
+	<tr>
+     <td><b>Numero:</b></td>
+     <td><input name="n_pro" type="text" id="n_pro" size="10" maxlength="60" /></td>
+    </tr>
+	
+    <tr>
+     <td><b>Bairro:</b></td>
+     <td><input name="bairro_pro" type="text" id="bairro_pro" size="30" maxlength="60" /></td>
+    </tr>
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+
+    <tr>
+     <td><b>Telefone Residencial:</b></td>
+     <td><input type="text" name="tel" maxlength="14" />
+    </tr>
+	
+    <tr>
+     <td><b>Telefone Profissional:</b></td>
+     <td><input type="text" name="tel_pro" maxlength="14">
+    </tr>
+    
+    <tr>
+     <td><b>Celular:</b></td>
+     <td><input name="cel" onKeyPress="MascaraCel(form1.cel);" type="text" id="cel" maxlength="14" onBlur="ValidaCel(form1.cel);" /></td>
+    </tr>
+	
+    <tr>
+     <td><b>Contato ou responsável:</b></td>
+     <td><input name="contato" type="text" id="contato" size="30" maxlength="60" /></td>
+    </tr>
+   
+
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+    
+    <tr>
+        <td> 
+	   <font color="navy">
+		<big>
+			<big>
+				Procura do serviço
+			</big>
+		</big>		
+	   </font>
+	</td>
+    </tr>
+
+
+    
+
+    <tr>
+     <td><b>Demanda de:</b></td>
+     <td><input name="demanda" type="text" id="demanda" size="30" maxlength="60" /></td>
+    </tr>
+    
+    <tr>
+     <td><b>Indicado por:</b></td>
+     <td><input name="indicado" type="text" id="indicado" size="30" maxlength="60" /></td>
+    </tr>
+	
+
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+    
+    
+    <tr>
+     <td><b>Queixa principal:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="queixa"></TEXTAREA>
+    </tr>
+
+    <tr>
+     <td><b>História da doença atual:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="hist_doenca"></TEXTAREA></td>
+    </tr>
+
+    <tr>
+     <td><b>Internações hospitalares:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="inter_hosp"></TEXTAREA></td>
+    </tr>    
+    
+    <tr>
+     <td><b>História familial:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="hist_familia"></TEXTAREA></td>
+    </tr>    
+
+    <tr>
+     <td><b>História pessoal e social:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="hist_pessoal"></TEXTAREA></td>
+    </tr>    
+
+    <tr>
+     <td><b>História escolar:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="hist_escolar"></TEXTAREA></td>
+    </tr>    
+
+    <tr>
+     <td><b>História ocupacional:</b></td>
+    <td><TEXTAREA COLS=30 ROWS=3 name="hist_ocu"></TEXTAREA></td>
+    </tr>    
+
+    <tr>
+     <td><b>Hábitos de vida:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="habitos"></TEXTAREA></td>
+    </tr>    
+
+    <tr>
+     <td><b>Revisão dos sistemas:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="revisao"></TEXTAREA></td>
+    </tr>
+      
+     <tr>
+		 <td> 
+		   <font color="navy">
+			<big>
+				<big>
+					Exame físico
+				</big>
+			</big>		
+		   </font>
+		</td>
+	</tr>
+	
+	
+    <tr>
+     <td><b>Ectoscopia:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="ecto"></TEXTAREA></td>
+    </tr>
+    
+    <tr>
+     <td><b>Exame sistêmico:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="exame_sis"></TEXTAREA></td>
+    </tr>
+    
+    <tr>
+     <td><b>Exame neurológico:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="exame_neu"></TEXTAREA></td>
+    </tr>
+    
+        
+    <tr>
+     <td>
+     <br>
+     </td>
+    </tr>
+    <tr>
+
+    <tr>
+        <td> 
+	   <font color="navy">
+		<big>
+			<big>
+				Exame psíquico
+			</big>
+		</big>		
+	   </font>
+	</td>
+    </tr>
+
+    <tr>
+     <td>
+	
+	<script languague="javascript">
+	function popup_aparencia(){
+	window.open('popup/aparencia.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_aparencia" onclick="popup_aparencia()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Aparência:</b>
+
+      </td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="aparencia"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_atitude(){
+	window.open('popup/atitude.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_atitude" onclick="popup_atitude()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Atitude:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="atitude"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_consciencia(){
+	window.open('popup/consciencia.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_consciencia" onclick="popup_consciencia()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Consciência:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="consciencia"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_orientacao(){
+	window.open('popup/orientacao.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_orientacao" onclick="popup_orientacao()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Orientação:</b>
+
+      </td>
+
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="orientacao"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_atencao(){
+	window.open('popup/atencao.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_atencao" onclick="popup_atencao()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Atenção:</b>
+
+      </td>
+
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="atencao"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_memoria(){
+	window.open('popup/memoria.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_memoria" onclick="popup_memoria()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Memória:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="memoria"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_senso(){
+	window.open('popup/senso.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_senso" onclick="popup_senso()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Senso-Percepsão:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="senso"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_pensamento(){
+	window.open('popup/pensamento.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_pensamento" onclick="popup_pensamento()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Pensamento:</b>
+
+      </td>
+
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="pensamento"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_linguagem(){
+	window.open('popup/linguagem.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_linguagem" onclick="popup_linguagem()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Linguagem:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="linguagem"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+     <td>
+	
+	<script languague="javascript">
+	function popup_inteligencia(){
+	window.open('popup/inteligencia.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_inteligencia" onclick="popup_inteligencia()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Inteligência:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="inteligencia"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_consciencia_doeu(){
+	window.open('popup/consciencia_doeu.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_consciencia_doeu" onclick="popup_consciencia_doeu()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Consciência do eu:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="do_eu"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_humor(){
+	window.open('popup/humor.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_humor" onclick="popup_humor()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b>  Humor:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="humor"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_afeto(){
+	window.open('popup/afeto.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_afeto" onclick="popup_afeto()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Afeto:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="afeto"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_volicao(){
+	window.open('popup/volicao.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_volicao" onclick="popup_volicao()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b> Volição:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="volicao"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_psicomotricidade(){
+	window.open('popup/psicomotricidade.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_psicomotricidade" onclick="popup_psicomotricidade()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b>  Psicomotricidade:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="psi"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_insight(){
+	window.open('popup/insight.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_insight" onclick="popup_insight()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b>  Insight:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="insight"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_contratransferencia(){
+	window.open('popup/contratransferencia.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_contratransferencia" onclick="popup_contratransferencia()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b>  Contratransferência:</b>
+
+      </td>
+
+     <td><TEXTAREA COLS=30 ROWS=3 name="contratrans"></TEXTAREA> <img src="images/lupa.png"></td>
+    </tr>
+
+    <tr>
+        <td> 
+	   <font color="navy">
+		<big>
+			<big>
+			Conclusões e Conduta
+			</big>
+		</big>		
+	   </font>
+	</td>
+    </tr>
+
+    <tr>
+     <td><b>  Súmula psiquiátrica:</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="sumula"></TEXTAREA>
+    </tr>
+
+    <tr>
+     <td><b>  Diagnóstico :</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="diagnostico"></TEXTAREA>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_cid(){
+	window.open('popup/cid.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_cid" onclick="popup_cid()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b>CID - 10:</b>
+
+      </td>
+
+     <td><input name="cid" type="text" id="cid" size="30" maxlength="60" /></td>
+    </tr>
+
+    <tr>
+
+     <td>
+	
+	<script languague="javascript">
+	function popup_dsm(){
+	window.open('popup/dsm.php','popup','width=600,height=400,scrolling=auto,top=0,left=0')
+	}
+	</script>
+	<a href="#popup_dsm" onclick="popup_dsm()"><img src="images/pdf_icon.png"></a> </a>
+	
+	<b>DSM - IV - TR:</b>
+
+      </td>
+
+     <td><input name="dsm" type="text" id="dsm" size="30" maxlength="60" /></td>
+    </tr>
+
+    <tr>
+     <td><b>  Exames compl. solicitados :</b></td>
+     <td><TEXTAREA COLS=30 ROWS=3 name="exames_compl"></TEXTAREA>
+    </tr>
+
+
+      <td colspan="2"><p>
+        <input name="cadastrar" type="submit" id="cadastrar" value="Cadastrar e Imprimir!" /> 
+		</td>
+    </tr>
+	
+
+   </table>
+  </form>
+ </body>
+</html>
